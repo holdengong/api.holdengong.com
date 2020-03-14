@@ -12,7 +12,7 @@ namespace api.holdengong.com.Controllers
         [HttpPost]
         public IActionResult GitSubscriber([FromBody]object request)
         {
-            var fileUrl = Path.Combine(Environment.CurrentDirectory, "publish_blog.sh");
+            var fileUrl = Path.Combine(Environment.CurrentDirectory, "blog.sh");
             Process.Start(fileUrl);
             return Ok();
         }
