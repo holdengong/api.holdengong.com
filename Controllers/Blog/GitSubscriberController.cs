@@ -1,7 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Diagnostics;
-using System.IO;
 
 namespace api.holdengong.com.Controllers
 {
@@ -12,8 +10,7 @@ namespace api.holdengong.com.Controllers
         [HttpPost]
         public IActionResult GitSubscriber([FromBody]object request)
         {
-            var fileUrl = Path.Combine(Environment.CurrentDirectory, "blog.sh");
-            Process.Start(fileUrl);
+            Process.Start("/scripts/blog.sh");
             return Ok();
         }
     }
